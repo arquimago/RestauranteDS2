@@ -10,8 +10,8 @@ public class Pedido extends Model<Pedido> {
     boolean entregue;
     ArrayList <Produto> produtos = new  ArrayList <Produto>();
 
-    public Pedido(Context context, ArrayList<Produto> produtos){
-        super(context);
+    public Pedido(/*Context context,*/ ArrayList<Produto> produtos){
+        //super(context);
         this.produtos = produtos;
         quantidadeDeProdutos = produtos.size();
         entregue = false;

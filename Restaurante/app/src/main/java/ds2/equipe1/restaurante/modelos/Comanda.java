@@ -13,8 +13,8 @@ public class Comanda extends Model<Comanda> {
     private String nome;
     private int mesa;
 
-    public Comanda(Context context, String nome, int mesa, Pedido primeiro){
-        super(context);
+    public Comanda(/*Context context,*/ String nome, int mesa, Pedido primeiro){
+        //super(context);
         Date agora = new Date();
         pedidos.add(primeiro);
         this.mesa = mesa;

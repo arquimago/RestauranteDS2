@@ -29,7 +29,7 @@ public class CadastroItem extends AppCompatActivity {
 
         init();
 
-        item = new Item(this);
+        //item = new Item(this);
         controleDeItem = new ControleDeItem(this);
 
         Intent intent = getIntent();
@@ -53,7 +53,7 @@ public class CadastroItem extends AppCompatActivity {
         edtLimiteMinimo = (EditText) findViewById(R.id.edtLimiteMinimo);
         btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
         btnExcluir = (Button) findViewById(R.id.btnExcluir);
-
+        item = new Item(edtNome.toString(), Integer.parseInt(edtQuantidade.toString()),edtUnidade.toString(), Integer.parseInt(edtLimiteMinimo.toString()));
         btnExcluir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

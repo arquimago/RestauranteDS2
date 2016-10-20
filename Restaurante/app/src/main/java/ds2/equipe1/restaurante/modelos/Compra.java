@@ -9,12 +9,12 @@ public class Compra extends Model<Compra> {
 	private String data;
 	private Fornecedor fornecedor;
 
-	public Compra(Context context){
+	/*public Compra(Context context){
 		super(context);
-	}
+	}*/
 
-	public Compra(Context context, Item item, int quantidade, float preco, String data, Fornecedor fornecedor) {
-		super(context);
+	public Compra(/*Context context,*/ Item item, int quantidade, float preco, String data, Fornecedor fornecedor) {
+		//super(context);
 		this.item = item;
 		this.quantidade = quantidade;
 		this.preco = preco;

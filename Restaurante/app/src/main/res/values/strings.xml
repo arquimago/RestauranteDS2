@@ -4,5 +4,4 @@
     <string name="cadastro_de_funcionario">Cadastro de Funcionário</string>
     <string name="busca_fornecedores">Buscar Fornecedores</string>
     <string name="produtos">Fornecedores</string>
-    <string name="title_activity_cadastro_produtos">Cadastro de produtos</string>
 </resources>

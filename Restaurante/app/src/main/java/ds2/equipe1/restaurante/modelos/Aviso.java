@@ -8,8 +8,8 @@ public class Aviso extends Model<Aviso> {
     private Item item;
     private Date data;
 
-    public Aviso(Context context, Item item) {
-        super(context);
+    public Aviso(/*Context context,*/ Item item) {
+        //super(context);
         this.item = item;
         this.data = new Date();
     }

@@ -20,13 +20,30 @@ import ds2.equipe1.restaurante.helpers.Utils;
 public class Model<T> {
     protected Integer id;
     //transient para a serializacao nao incluir.
-    protected transient Context context;
+    //protected transient Context context;
 
-    public Model(Context context){
-        this.context = context;
+    public Model(/*Context context*/){
+        //this.context = context;
     }
 
-    public void setContext(Context context){
+    void save(){
+        System.out.println("SALVO!");
+    }
+
+    public void delete(){
+        System.out.println("APAGADO!");
+    }
+
+    public void setId(Object object){
+        this.id=1;
+        System.out.println("Id adicionado");
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    /*public void setContext(Context context){
         this.context = context;
     }
 
@@ -95,5 +112,5 @@ public class Model<T> {
 
     protected String getControllerName(){
         return this.getClass().getSimpleName();
-    }
+    }*/
 }

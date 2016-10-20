@@ -6,8 +6,8 @@ public class Ingrediente extends Model<Ingrediente> {
     private Item item;
     private int quantidade;
 
-    public Ingrediente(Context context, Item item, int quantidade) {
-        super(context);
+    public Ingrediente(/*Context context,*/ Item item, int quantidade) {
+        //super(context);
         this.item = item;
         this.quantidade = quantidade;
     }

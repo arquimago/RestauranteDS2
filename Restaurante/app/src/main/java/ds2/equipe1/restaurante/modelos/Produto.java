@@ -9,12 +9,12 @@ public class Produto extends Model<Produto> {
 	private float preco;
     private ArrayList<Ingrediente> ingredientes = new ArrayList<>();
 
-    public Produto(Context context){
+    /*public Produto(Context context){
         super(context);
-    }
+    }*/
 
-    public Produto(Context context, String nome, float preco, ArrayList<Ingrediente> ingredientes) {
-        super(context);
+    public Produto(/*Context context, */String nome, float preco, ArrayList<Ingrediente> ingredientes) {
+        //super(context);
         this.nome = nome;
         this.preco = preco;
         this.ingredientes = ingredientes;
@@ -62,7 +62,7 @@ public class Produto extends Model<Produto> {
     public void alertarSobreItensAbaixoDoLimite(){
         for (Ingrediente ingrediente : getIngredientes()){
             Item item = ingrediente.getItem();
-            item.verificarItemAbaixoDoLimite(ingrediente.getQuantidade());
+            //item.verificarItemAbaixoDoLimite(ingrediente.getQuantidade());
         }
     }
     

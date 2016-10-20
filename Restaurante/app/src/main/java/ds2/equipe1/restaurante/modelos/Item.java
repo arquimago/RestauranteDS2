@@ -14,23 +14,23 @@ public class Item extends Model<Item> {
 	@SerializedName("limite")
 	private int limiteMinimo;
 
-	public Item(Context context){
+	/*public Item(Context context){
 		super(context);
-	}
+	}*/
 
-	public Item(Context context, String nome, int quantidade, String unidade, int limiteMinimo){
-		super(context);
+	public Item(/*Context context,*/ String nome, int quantidade, String unidade, int limiteMinimo){
+		//super(context);
 		this.nome = nome;
 		this.unidade = unidade;
 		this.quantidade = quantidade;
 		this.limiteMinimo = limiteMinimo;
     }
     
-    public void verificarItemAbaixoDoLimite(int quantidadeParaReduzir){
+    /*public void verificarItemAbaixoDoLimite(int quantidadeParaReduzir){
 		if (getQuantidade()-quantidadeParaReduzir < getLimiteMinimo()){
 			new Aviso(context, this).save();
 		}
-    }
+    }*/
     
 	public String getNome(){
         return nome;
@@ -72,9 +72,9 @@ public class Item extends Model<Item> {
         super.save();
     }
 
-    @Override
+    /*@Override
     public void save(RequestCallback<Model> callback) {
         unidade = unidade.toUpperCase();
         super.save(callback);
-    }
+    }*/
 }

@@ -8,9 +8,9 @@ public class Mesa extends Model<Mesa> {
     private int numero;
     private ArrayList<Comanda> comandas = new ArrayList< Comanda >();
 
-    public Mesa(Context context, int numero){
-        super(context);
-        //inserir chamada do SQL para carregar comandas ativas
+    public Mesa(/*Context context, */int numero){
+        //super(context);
+
         this.numero = numero;
     }
 
