@@ -51,7 +51,7 @@ public class ControleDeEndereco {
     public void consultarEndereco(String consulta, final RequestCallback<Endereco> callback){
         //Se a consulta for vazio, pega todos os itens do banco de dados, e coloca na memoria ram
         if (consulta.isEmpty()) {
-            Model.find(context, Endereco.class, new TypeToken<ArrayList<Endereco>>() {
+            /*Model.find(context, Endereco.class, new TypeToken<ArrayList<Endereco>>() {
                     }.getType(), new RequestCallback<Endereco>() {
                         @Override
                         public void execute(ArrayList<Endereco> lista) throws Exception {
@@ -64,7 +64,7 @@ public class ControleDeEndereco {
                                 callback.execute(lista);
                             }
                         }
-                    }, null);
+                    }, null);*/
         } else {
             //Se tiver consulta, faz a pesquisa nos itens que já estão na memória ram
             try {

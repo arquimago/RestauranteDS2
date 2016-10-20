@@ -22,12 +22,12 @@ public class ControleDeAtendimento {
         //inserir comando sql pra saber numero de mesas
         int numeroDeMesas = 20; //puxar numero do sql
         for(int i = 1; i <= numeroDeMesas; i++) {
-            mesas.add(new Mesa(context, i));
+            mesas.add(new Mesa(/*context,*/ i));
         }
     }
 
     public void criarComanda(Mesa mesa, Pedido pedido, String nome){
-        mesa.addComanda(new Comanda(context, nome, mesa.getNumero(), pedido));
+        mesa.addComanda(new Comanda(/*context, */nome, mesa.getNumero(), pedido));
     }
 
     public void encerrarComanda(Comanda comanda){

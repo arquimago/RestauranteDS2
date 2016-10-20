@@ -34,7 +34,7 @@ public class ControleDeCompra {
 
 	public void consultarCompra(String consulta, final RequestCallback<Compra> callback) {
 		if (consulta.isEmpty()) {
-			Model.find(context, Compra.class, new TypeToken<ArrayList<Compra>>() {
+			/*Model.find(context, Compra.class, new TypeToken<ArrayList<Compra>>() {
 			}.getType(), new RequestCallback<Compra>() {
 				@Override
 				public void execute(ArrayList<Compra> lista) throws Exception {
@@ -47,7 +47,7 @@ public class ControleDeCompra {
 						callback.execute(lista);
 					}
 				}
-			}, null);
+			}, null);*/
 		} else {
 			try {
 				ArrayList<Compra> comprasFiltradas = new ArrayList<>();

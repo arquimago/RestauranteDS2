@@ -12,7 +12,9 @@ public class Produto extends Model<Produto> {
     /*public Produto(Context context){
         super(context);
     }*/
+    public Produto(){
 
+    }
     public Produto(/*Context context, */String nome, float preco, ArrayList<Ingrediente> ingredientes) {
         //super(context);
         this.nome = nome;

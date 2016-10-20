@@ -17,6 +17,9 @@ public class Item extends Model<Item> {
 	/*public Item(Context context){
 		super(context);
 	}*/
+	public Item(){
+
+	}
 
 	public Item(/*Context context,*/ String nome, int quantidade, String unidade, int limiteMinimo){
 		//super(context);

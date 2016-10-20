@@ -34,7 +34,7 @@ public class CadastroFuncionario extends AppCompatActivity {
 
         init();
 
-        funcionario = new Funcionario(this);
+        funcionario = new Funcionario(/*this*/);
         controleDeFuncionario = new ControleDeFuncionario(this);
 
         Intent intent = getIntent();

@@ -27,7 +27,7 @@ public class ControleDeProduto {
     }
 
     public void salvarProduto(Produto produto, RequestCallback<Model> callback){
-        produto.save(callback);
+        produto.save(/*callback*/);
     }
 
     public boolean excluirProduto(Produto produto){
@@ -40,7 +40,7 @@ public class ControleDeProduto {
     public void consultarProduto(String consulta, final RequestCallback<Produto> callback){
         //Se a consulta for vazio, pega todos os itens do banco de dados, e coloca na memoria ram
         if (consulta == null || produtos == null) {
-            Model.find(context, Produto.class, new TypeToken<ArrayList<Produto>>() {
+            /*Model.find(context, Produto.class, new TypeToken<ArrayList<Produto>>() {
             }.getType(), new RequestCallback<Produto>() {
                 @Override
                 public void execute(ArrayList<Produto> lista) throws Exception {
@@ -53,7 +53,7 @@ public class ControleDeProduto {
                         callback.execute(lista);
                     }
                 }
-            }, null);
+            }, null);*/
         } else {
             consulta = consulta.toLowerCase();
             //Se tiver consulta, faz a pesquisa nos itens que ja estao na memoria ram

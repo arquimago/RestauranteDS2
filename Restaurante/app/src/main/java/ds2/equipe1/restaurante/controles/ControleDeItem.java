@@ -58,7 +58,7 @@ public class ControleDeItem {
     public void consultarItem(String consulta, final RequestCallback<Item> callback) {
         //Se a consulta for vazio, pega todos os itens do banco de dados, e coloca na memoria ram
         if (consulta == null || itens == null) {
-            Model.find(context, Item.class, new TypeToken<ArrayList<Item>>() {
+            /*Model.find(context, Item.class, new TypeToken<ArrayList<Item>>() {
             }.getType(), new RequestCallback<Item>() {
                 @Override
                 public void execute(ArrayList<Item> lista) throws Exception {
@@ -71,7 +71,7 @@ public class ControleDeItem {
                         callback.execute(lista);
                     }
                 }
-            }, null);
+            }, null);*/
         } else {
             //Se tiver consulta, faz a pesquisa nos itens que ja estao na memoria ram
             try {

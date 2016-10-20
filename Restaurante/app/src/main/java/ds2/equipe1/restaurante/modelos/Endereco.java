@@ -14,7 +14,9 @@ public class Endereco extends Model<Endereco> {
     /*public Endereco(Context context){
         super(context);
     }*/
+    public Endereco(){
 
+    }
     public Endereco(/*Context context, */String logradouro, String rua, int numero, String bairro, String cidade, String estado, String cep) {
         //super(context);
         this.logradouro = logradouro;

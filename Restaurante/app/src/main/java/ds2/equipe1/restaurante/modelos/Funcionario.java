@@ -16,6 +16,9 @@ public class Funcionario extends Model<Funcionario> {
     /*public Funcionario(Context context){
         super(context);
     }*/
+    public Funcionario(){
+
+    }
 
     public Funcionario(/*Context context, */String nome, Endereco endereco, String telefone, String cpf, String nome_usuario, Integer tipo) {
         //super(context);

@@ -12,7 +12,9 @@ public class Compra extends Model<Compra> {
 	/*public Compra(Context context){
 		super(context);
 	}*/
+	public Compra(){
 
+	}
 	public Compra(/*Context context,*/ Item item, int quantidade, float preco, String data, Fornecedor fornecedor) {
 		//super(context);
 		this.item = item;

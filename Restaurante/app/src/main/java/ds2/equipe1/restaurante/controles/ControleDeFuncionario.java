@@ -26,7 +26,7 @@ public class ControleDeFuncionario {
     }
 
     public void salvarFuncionario(Funcionario funcionario, RequestCallback<Model> callback){
-        funcionario.save(callback);
+        funcionario.save(/*callback*/);
     }
 
     public void cadastrarFuncionario(Funcionario funcionario){
@@ -59,7 +59,7 @@ public class ControleDeFuncionario {
     public void consultarFuncionario(String consulta, final RequestCallback<Funcionario> callback){
         //Se a consulta for vazia, pega todos os itens do banco de dados e coloca na memoria ram
         if (consulta == null || funcionarios == null) {
-            Model.find(context, Funcionario.class, new TypeToken<ArrayList<Funcionario>>() {
+            /*Model.find(context, Funcionario.class, new TypeToken<ArrayList<Funcionario>>() {
             }.getType(), new RequestCallback<Funcionario>() {
                 @Override
                 public void execute(ArrayList<Funcionario> lista) throws Exception {
@@ -72,7 +72,7 @@ public class ControleDeFuncionario {
                         callback.execute(lista);
                     }
                 }
-            }, null);
+            }, null);*/
         } else {
             consulta = consulta.toLowerCase();
             //Se tiver consulta, faz a pesquisa nos itens que ja estao na memoria ram

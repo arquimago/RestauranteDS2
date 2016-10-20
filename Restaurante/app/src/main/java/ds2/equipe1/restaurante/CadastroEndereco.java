@@ -31,7 +31,7 @@ public class CadastroEndereco extends AppCompatActivity {
             carregarEndereco();
             btnCadastrar.setText("Alterar");
         } else {
-            endereco = new Endereco(this);
+            endereco = new Endereco(/*this*/);
             ControleDeEndereco.selecionarParaEditar(endereco);
         }
     }

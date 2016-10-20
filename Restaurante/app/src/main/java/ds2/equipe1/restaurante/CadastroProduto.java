@@ -42,7 +42,7 @@ public class CadastroProduto extends AppCompatActivity {
 
         init();
 
-        produto = new Produto(this);
+        produto = new Produto(/*this*/);
 
         controleDeProduto = new ControleDeProduto(this);
         controleDeItem = new ControleDeItem(this);
@@ -125,7 +125,7 @@ public class CadastroProduto extends AppCompatActivity {
         new Utils(this).selectPopup("Cadastrar ingrediente", new Utils.IngredienteCallback() {
             @Override
             public void execute(Item item, int quantidade) {
-                ingredientes.add(new Ingrediente(CadastroProduto.this, item, quantidade));
+                ingredientes.add(new Ingrediente(/*CadastroProduto.this,*/ item, quantidade));
                 adapter.notifyDataSetChanged();
             }
         }, itens);

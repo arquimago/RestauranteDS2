@@ -30,7 +30,7 @@ public class CadastroFornecedor extends AppCompatActivity {
 
         init();
 
-        fornecedor = new Fornecedor(this);
+        fornecedor = new Fornecedor(/*this*/);
         controleDeFornecedor = new ControleDeFornecedor(this);
 
         Intent intent = getIntent();
