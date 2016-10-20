@@ -26,7 +26,7 @@ public class ControleDeFornecedor {
     }
 
     public void salvarFornecedor(Fornecedor fornecedor, RequestCallback<Model> callback){
-        fornecedor.save(callback);
+        fornecedor.save(/*callback*/);
     }
 
     public boolean excluirFornecedor(Fornecedor fornecedor){
@@ -39,7 +39,7 @@ public class ControleDeFornecedor {
     public void consultarFornecedor(String consulta, final RequestCallback<Fornecedor> callback){
         //Se a consulta for vazio, pega todos os itens do banco de dados, e coloca na memoria ram
         if (consulta == null || fornecedores == null) {
-            Model.find(context, Fornecedor.class, new TypeToken<ArrayList<Fornecedor>>() {
+            /*Model.find(context, Fornecedor.class, new TypeToken<ArrayList<Fornecedor>>() {
                     }.getType(), new RequestCallback<Fornecedor>() {
                         @Override
                         public void execute(ArrayList<Fornecedor> lista) throws Exception {
@@ -52,7 +52,7 @@ public class ControleDeFornecedor {
                                 callback.execute(lista);
                             }
                         }
-                    }, null);
+                    }, null);*/
         } else {
             consulta = consulta.toLowerCase();
             //Se tiver consulta, faz a pesquisa nos itens que ja estao na memoria ram

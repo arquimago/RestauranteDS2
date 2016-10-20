@@ -26,7 +26,7 @@ public class Model<T> {
         //this.context = context;
     }
 
-    void save(){
+    public void save(){
         System.out.println("SALVO!");
     }
 

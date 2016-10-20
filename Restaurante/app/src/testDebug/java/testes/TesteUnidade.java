@@ -20,7 +20,7 @@ import ds2.equipe1.restaurante.modelos.*;
 
 public class TesteUnidade {
 
-   public TesteUnidade(){
+   //public TesteUnidade(){
       Item item = new Item("Farinha",50,"kg",10);
       Fornecedor fornecedor = new Fornecedor("Fernando","234-5678","123456789/11","email@email.com");
       Compra compra = new Compra(item,100,100,"10/10/16",fornecedor);
@@ -29,13 +29,13 @@ public class TesteUnidade {
       Gerente gerente = new Gerente("Melo",endereco,"234-5678","123456789-00","melo");
       Ingrediente ingrediente = new Ingrediente(item, 2);
       Mesa mesa = new Mesa(1);
-      ArrayList<Ingrediente> ingredientes = null;
+      ArrayList<Ingrediente> ingredientes = new ArrayList();
       ingredientes.add(ingrediente);
       Produto produto = new Produto("Pizza",10,ingredientes);
-      ArrayList<Produto> produtos = null;
+      ArrayList<Produto> produtos = new ArrayList();
       produtos.add(produto);
       Pedido pedido = new Pedido(produtos);
-   }
+   //}
 
   /* vamos testaresssas classes acima e ver no que dá*/
 
