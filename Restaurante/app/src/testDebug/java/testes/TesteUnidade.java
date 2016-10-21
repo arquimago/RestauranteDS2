@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import ds2.equipe1.restaurante.modelos.*;
 
@@ -30,11 +31,8 @@ public class TesteUnidade {
    Ingrediente ingrediente = new Ingrediente(item, 2);
    Mesa mesa = new Mesa(1);
    ArrayList<Ingrediente> ingredientes = new ArrayList<Ingrediente>();
-   ingredientes.add(ingrediente);
-   Produto produto = new Produto("Pizza",10,ingredientes);
    ArrayList <Produto> produtos = new  ArrayList <Produto>();
-   produtos.add(produto);
-   Pedido pedido = new Pedido(produtos);
+   ArrayList <Pedido> tempPedidos = null;
 
    /* vamos testaresssas classes acima e ver no que dá*/
    @Test
@@ -65,4 +63,77 @@ public class TesteUnidade {
       assertEquals("litro",item.getUnidade());
    }
 
+   @Test
+   public void TestComandaGetCustoTotal() throws Exception {
+      ingredientes.add(ingrediente);
+      Produto produto = new Produto("Pizza",10,ingredientes);
+      produtos.add(produto);
+      Pedido pedido = new Pedido(produtos);
+      Comanda comanda = new Comanda("Ze",1,pedido);
+      assertEquals(10,comanda.getCustoTotal(),0.0);
+   }
+
+   @Test
+   public void TestComandaRemoverPedido() throws Exception {
+      ingredientes.add(ingrediente);
+      Produto produto = new Produto("Pizza",10,ingredientes);
+      produtos.add(produto);
+      Pedido pedido = new Pedido(produtos);
+      Comanda comanda = new Comanda("Ze",1,pedido);
+      comanda.removerPedido(pedido);
+      tempPedidos = comanda.getPedidos();
+      assertEquals(0,tempPedidos.size());
+   }
+
+   @Test
+   public void TestComandaIsAtiva() throws Exception {
+      ingredientes.add(ingrediente);
+      Produto produto = new Produto("Pizza",10,ingredientes);
+      produtos.add(produto);
+      Pedido pedido = new Pedido(produtos);
+      Comanda comanda = new Comanda("Ze",1,pedido);
+      assertEquals(true,comanda.isAtiva());
+   }
+
+   @Test
+   public void TestComandaDesativar() throws Exception {
+      ingredientes.add(ingrediente);
+      Produto produto = new Produto("Pizza",10,ingredientes);
+      produtos.add(produto);
+      Pedido pedido = new Pedido(produtos);
+      Comanda comanda = new Comanda("Ze",1,pedido);
+      comanda.desativar();
+      assertEquals(false,comanda.isAtiva());
+   }
+
+   @Test
+   public void TestComandaGetPedido() throws Exception {
+      ingredientes.add(ingrediente);
+      Produto produto = new Produto("Pizza",10,ingredientes);
+      produtos.add(produto);
+      Pedido pedido = new Pedido(produtos);
+      Comanda comanda = new Comanda("Ze",1,pedido);
+      assertEquals(pedido,comanda.getPedido(0));
+   }
+
+   @Test
+   public void TestComandaGetData() throws Exception {
+      ingredientes.add(ingrediente);
+      Produto produto = new Produto("Pizza",10,ingredientes);
+      produtos.add(produto);
+      Pedido pedido = new Pedido(produtos);
+      Comanda comanda = new Comanda("Ze",1,pedido);
+      Date agora = new Date();
+      assertEquals(agora.toString(), comanda.getData().toString());
+   }
+
+   @Test
+   public void TestComandaGetMesa() throws Exception {
+      ingredientes.add(ingrediente);
+      Produto produto = new Produto("Pizza",10,ingredientes);
+      produtos.add(produto);
+      Pedido pedido = new Pedido(produtos);
+      Comanda comanda = new Comanda("Ze",1,pedido);
+      assertEquals(1,comanda.getMesa());
+   }
 }
