@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 import ds2.equipe1.restaurante.modelos.*;
 
+import static junit.framework.Assert.assertEquals;
 
 
 /**
@@ -29,14 +30,41 @@ public class TesteUnidade {
       Gerente gerente = new Gerente("Melo",endereco,"234-5678","123456789-00","melo");
       Ingrediente ingrediente = new Ingrediente(item, 2);
       Mesa mesa = new Mesa(1);
-      ArrayList<Ingrediente> ingredientes = new ArrayList();
+      /*ArrayList<Ingrediente> ingredientes = new ArrayList();
       ingredientes.add(ingrediente);
       Produto produto = new Produto("Pizza",10,ingredientes);
       ArrayList<Produto> produtos = new ArrayList();
       produtos.add(produto);
-      Pedido pedido = new Pedido(produtos);
+      Pedido pedido = new Pedido(produtos);*/
    //}
 
-  /* vamos testaresssas classes acima e ver no que dá*/
+   /* vamos testaresssas classes acima e ver no que dá*/
+   @Test
+   public void TestItemgetNome(){
+      assertEquals("Farinha",item.getNome());
+      item.setNome("Farofa");
+      assertEquals("Farofa",item.getNome());
+   }
+
+   @Test
+   public void TestItemGetQuantidade(){
+      assertEquals(50,item.getQuantidade());
+      item.setQuantidade(200);
+      assertEquals(200,item.getQuantidade());
+   }
+
+   @Test
+   public void TestItemGetLimiteMinimo(){
+      assertEquals(10,item.getLimiteMinimo());
+      item.setLimiteMinimo(5);
+      assertEquals(5,item.getLimiteMinimo());
+   }
+
+   @Test
+   public void TestItemGetUnidade(){
+      assertEquals("kg",item.getUnidade());
+      item.setUnidade("litro");
+      assertEquals("litro",item.getUnidade());
+   }
 
 }
