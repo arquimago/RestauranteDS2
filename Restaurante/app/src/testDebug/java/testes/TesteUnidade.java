@@ -136,4 +136,16 @@ public class TesteUnidade {
       Comanda comanda = new Comanda("Ze",1,pedido);
       assertEquals(1,comanda.getMesa());
    }
+
+   @Test
+   public void TestComandaGetNome() throws Exception {
+      ingredientes.add(ingrediente);
+      Produto produto = new Produto("Pizza",10,ingredientes);
+      produtos.add(produto);
+      Pedido pedido = new Pedido(produtos);
+      Comanda comanda = new Comanda("Ze",1,pedido);
+      assertEquals("Ze",comanda.getNome());
+   }
+
+
 }
